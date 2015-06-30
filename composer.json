@@ -31,7 +31,8 @@
 
 "twig/twig":                        "*",
 
-"doctrine/doctrine-bundle":         "*"
+"doctrine/doctrine-bundle":         "*",
+"skcms/front-bundle":         "dev-master"
 
 
 

@@ -40,11 +40,11 @@
 
 "autoload": {
 
-"psr-0": { "SKCMS\\Bundle\\TrackingBundle":   "" }
+"psr-0": { "SKCMS\\TrackingBundle":   "" }
 
 },
 
-"target-dir": "SKCMS/Bundle/TrackingBundle",
+"target-dir": "SKCMS/TrackingBundle",
 
 "minimum-stability":   "dev"
 

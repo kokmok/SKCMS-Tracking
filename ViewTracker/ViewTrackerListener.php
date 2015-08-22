@@ -67,6 +67,7 @@ class ViewTrackerListener
     }
     public function onKernelController(\Symfony\Component\HttpKernel\Event\FilterControllerEvent $event)
     {
+        
         if ($event->getRequestType() == \Symfony\Component\HttpKernel\HttpKernelInterface::SUB_REQUEST)
         {
             return ;
@@ -74,6 +75,10 @@ class ViewTrackerListener
         if ($event->getRequest()->isXmlHttpRequest())
         {
             return ;
+        }
+        if (null == $this->security->getToken())
+        {
+           return;
         }
         $this->user = $this->security->getToken()->getUser();
         if ($this->security->isGranted('ROLE_ADMIN'))

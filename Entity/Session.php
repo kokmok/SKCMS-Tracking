@@ -37,7 +37,7 @@ class Session
     
     /**
      * 
-     * @ORM\ManyToOne(targetEntity="SKCMS\UserBundle\Entity\User",inversedBy="postViews")
+     * @ORM\ManyToOne(targetEntity="SKCMS\UserBundle\Entity\User",inversedBy="sessions")
      */
     private $user;
     

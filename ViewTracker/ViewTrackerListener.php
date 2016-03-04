@@ -109,7 +109,7 @@ class ViewTrackerListener
     public function adaptResponse(\Symfony\Component\HttpKernel\Event\FilterResponseEvent $event)
     {
         
-        if (null !== $this->session)
+        if (null !== $this->session && null !== $this->view)
         {
             $response = $this->responseAdapter->processAdaptation($event->getResponse(), $this->container->get('router')->generate('skcms_tracking_updater',['id'=>$this->view->getId()]));
             $event->setResponse($response);
